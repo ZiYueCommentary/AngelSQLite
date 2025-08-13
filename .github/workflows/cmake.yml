@@ -22,7 +22,7 @@ jobs:
           cmake-version: '3.8'
 
       - name: Configure
-        run: cmake -S . -B cmake-build-release -A Win32 -G "Visual Studio 17 2022"
+        run: cmake -S . -DCMAKE_TOOLCHAIN_FILE=../mingw_toolchain.cmake
 
       - name: Build
         run: cmake --build cmake-build-release --config Release
