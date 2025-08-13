@@ -22,7 +22,7 @@ jobs:
           cmake-version: '3.8'
 
       - name: Configure
-        run: cmake -S . -DCMAKE_TOOLCHAIN_FILE=../mingw_toolchain.cmake
+        run: cmake -S .
 
       - name: Build
         run: cmake --build cmake-build-release --config Release
