@@ -22,7 +22,7 @@ jobs:
           cmake-version: '3.8'
 
       - name: Configure
-        run: cmake -S .
+        run: cmake -S . -B cmake-build-release -A Win32 -G "Visual Studio 17 2022"
 
       - name: Build
-        run: cmake --build
+        run: cmake --build cmake-build-release --config Release
